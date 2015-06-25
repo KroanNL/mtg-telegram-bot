@@ -1,0 +1,10 @@
+{
+  "name": "mtgbot",
+  "version": "0.0.1",
+  "description": "An MTG Bot for telegram",
+  "dependencies": {
+    "body-parser": "^1.13.1",
+    "express": "^4.13.0",
+    "telegram-bot-api": "^0.1.0"
+  }
+}
