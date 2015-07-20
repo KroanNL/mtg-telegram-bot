@@ -1,10 +1,14 @@
 {
-  "name": "mtgbot",
-  "version": "0.0.1",
-  "description": "An MTG Bot for telegram",
-  "dependencies": {
-    "body-parser": "^1.13.1",
-    "express": "^4.13.0",
-    "telegram-bot-api": "^0.1.0"
-  }
+	"name": "mtgbot",
+	
+	"main": "server.js",
+	"version": "0.0.1",
+	"description": "An MTG Bot for telegram",
+	"engines": { "node": "0.10.30" },
+	"dependencies": {
+		"body-parser": "^1.13.1",
+		"express": "^4.13.0",
+		"request": "^2.58.0",
+		"restler": "^3.2.2"
+	}
 }
