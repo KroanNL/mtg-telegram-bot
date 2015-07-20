@@ -52,7 +52,7 @@ app.post('/getCard',function(req,res)
                         {
                             if(body.length <= 2)
                             {
-                                restler.post("https://api.telegram.org/bot122225250:AAG0XoX_tB7iWiZoKmovhxGyOULzfg7J6PU/sendMessage", {
+                                restler.post("https://api.telegram.org/[INSERT BOT API KEY]/sendMessage", {
                                         multipart: false,
                                         data: {
                                             "chat_id": chatID,                                
@@ -108,7 +108,7 @@ function sendCardAsTelegramMessage(body, cardname, chatID, messageID)
                     {
                         console.log(imageName);
                         console.log(stats.size);
-                        restler.post("https://api.telegram.org/bot122225250:AAG0XoX_tB7iWiZoKmovhxGyOULzfg7J6PU/sendPhoto", {
+                        restler.post("https://api.telegram.org/[INSERT BOT API KEY]/sendPhoto", {
                             multipart: true,
                             data: {
                                 "chat_id": chatID,
@@ -124,7 +124,7 @@ function sendCardAsTelegramMessage(body, cardname, chatID, messageID)
         });
     });*/
     
-    restler.post("https://api.telegram.org/bot122225250:AAG0XoX_tB7iWiZoKmovhxGyOULzfg7J6PU/sendMessage", {
+    restler.post("https://api.telegram.org/[INSERT BOT API KEY]/sendMessage", {
             multipart: false,
             data: {
                 "chat_id": chatID,                                
