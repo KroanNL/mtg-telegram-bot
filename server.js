@@ -10,6 +10,7 @@ app.use(bodyParser.json());
 
 var ipaddress = process.env.OPENSHIFT_NODEJS_IP || "127.0.0.1";
 var port      = process.env.OPENSHIFT_NODEJS_PORT || 8080;
+var telegramBotKey = "INSERT BOT KEY HERE]";
 
 app.listen(port,ipaddress,function()
     {
@@ -52,7 +53,7 @@ app.post('/getCard',function(req,res)
                         {
                             if(body.length <= 2)
                             {
-                                restler.post("https://api.telegram.org/[INSERT BOT API KEY]/sendMessage", {
+                                restler.post("https://api.telegram.org/" + telegramBotKey + "/sendMessage", {
                                         multipart: false,
                                         data: {
                                             "chat_id": chatID,                                
@@ -108,7 +109,7 @@ function sendCardAsTelegramMessage(body, cardname, chatID, messageID)
                     {
                         console.log(imageName);
                         console.log(stats.size);
-                        restler.post("https://api.telegram.org/[INSERT BOT API KEY]/sendPhoto", {
+                        restler.post("https://api.telegram.org/" + telegramBotKey + "/sendPhoto", {
                             multipart: true,
                             data: {
                                 "chat_id": chatID,
@@ -124,7 +125,7 @@ function sendCardAsTelegramMessage(body, cardname, chatID, messageID)
         });
     });*/
     
-    restler.post("https://api.telegram.org/[INSERT BOT API KEY]/sendMessage", {
+    restler.post("https://api.telegram.org/" + telegramBotKey + "/sendMessage", {
             multipart: false,
             data: {
                 "chat_id": chatID,                                
